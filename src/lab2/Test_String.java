@@ -94,7 +94,7 @@ public class Test_String {
 	public void CheckingFalse() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
-		assertFalse(obj1 == obj2);
+		assertTrue(obj1 != obj2);
 	}
 
 	
