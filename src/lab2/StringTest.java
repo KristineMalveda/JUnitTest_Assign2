@@ -7,66 +7,66 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class Test_String {
+public class StringTest {
 
 	// Uppgift 1
 	@Test
-	public void Writing_Sometext_Backwards() {
-		StringBuilder b = new StringBuilder("Jag");
-		String reversedWord = b.reverse().toString();
+	public void writingSometextBackwards() {
+		StringBuilder stringbuilder = new StringBuilder("Jag");
+		String reversedWord = stringbuilder.reverse().toString();
 		assertEquals("gaJ", reversedWord);
 	}
 
-	// Uppgift 2 - return "String" behöver ta bort för att testet ska gå att exekvera
+	// Uppgift 2 
 	@Test
-	public void JustASimpleAssert() {
+	public void justASimpleAssert() {
 		String name = "My name";
 		assertEquals("My name", name);
-		// return "String";
+		//return "String";
 	}
 
 	// Uppgift 3
 	@Test
-	public void AssertFirstName() {
+	public void assertFirstName() {
 		String firstName = "first name";
 		assertEquals("first name", firstName);
 	}
 
 	@Test
-	public void AssertLastName() {
+	public void assertLastName() {
 		String lastName = "last name";
 		assertEquals("last name", lastName);
 	}
 
 	@Test
-	public void AssertPhoneNumber() {
+	public void assertPhoneNumber() {
 		int phoneNumber = 0701111111;
 		assertEquals(0701111111, phoneNumber);
 	}
 
 	@Test
-	public void AssertStreetAddress() {
+	public void assertStreetAddress() {
 		String streetAddress = "my cool street";
 		assertEquals("my cool street", streetAddress);
 	}
 
 	// uppgift 4
 	@Test
-	public void TestingAsSimpleAsPossible() {
+	public void testingAsSimpleAsPossible() {
 		String jUnit = "Junit 5";
 		int jUnitLength = jUnit.length();
-		assert jUnitLength == 7;
+		assertEquals(7, jUnitLength);
 	}
 
 	// Uppgift 5 - man måste lägga till @Test -annotation för att testa metoden
 	@Test
-	public void GiveMeASimpleVerification() {
+	public void giveMeASimpleVerification() {
 		assertEquals(100, 100);
 	}
 
 	// Uppgift 6
 	@Test
-	public void CheckingSame() {
+	public void checkingSame() {
 		String s1 = new String("S1");
 		String s2 = new String("S1");
 		s1 = s2;
@@ -75,7 +75,7 @@ public class Test_String {
 
 	// Uppgift 7
 	@Test
-	public void CheckingBytes() {
+	public void checkingBytes() {
 		byte smallByte1 = 100;
 		byte smallByte2 = smallByte1;
 		assertTrue(smallByte1 == smallByte2);
@@ -83,7 +83,7 @@ public class Test_String {
 
 	// Uppgift 9
 	@Test
-	public void CheckingTrue() {
+	public void checkingTrue() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
 		assertFalse(obj1 == obj2);
@@ -91,11 +91,10 @@ public class Test_String {
 
 	// Uppgift 10
 	@Test
-	public void CheckingFalse() {
+	public void checkingFalse() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
 		assertTrue(obj1 != obj2);
 	}
 
-	
 }
