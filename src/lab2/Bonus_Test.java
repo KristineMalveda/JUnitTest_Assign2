@@ -1,7 +1,6 @@
 package lab2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +13,7 @@ public class Bonus_Test {
 	public void setUp() {
 		person.setFirstName("Kristine");
 		person.setLastName("Malveda");
-		person.setAge(36);
+		person.setAge(35);
 	}
 
 	@Test

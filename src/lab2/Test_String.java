@@ -55,10 +55,10 @@ public class Test_String {
 	public void TestingAsSimpleAsPossible() {
 		String jUnit = "Junit 5";
 		int jUnitLength = jUnit.length();
-		assertEquals(7, jUnitLength);
+		assert jUnitLength == 7;
 	}
 
-	// Uppgift 5 - man måste lägga till @Test -annotation för att test metoden
+	// Uppgift 5 - man måste lägga till @Test -annotation för att testa metoden
 	@Test
 	public void GiveMeASimpleVerification() {
 		assertEquals(100, 100);
