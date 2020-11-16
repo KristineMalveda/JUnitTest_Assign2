@@ -86,7 +86,7 @@ public class StringTest {
 	public void checkingTrue() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
-		assertFalse(obj1 == obj2);
+		assertTrue(obj1 != obj2);
 	}
 
 	// Uppgift 10
@@ -94,7 +94,7 @@ public class StringTest {
 	public void checkingFalse() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
-		assertTrue(obj1 != obj2);
+		assertFalse(obj1 == obj2);
 	}
 
 }
