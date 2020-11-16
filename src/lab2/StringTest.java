@@ -11,18 +11,18 @@ public class StringTest {
 
 	// Uppgift 1
 	@Test
-	public void writingSometextBackwards() {
-		StringBuilder stringbuilder = new StringBuilder("Jag");
+	public void testAReversedString() {
+		String word = "Jag";
+		StringBuilder stringbuilder = new StringBuilder(word);
 		String reversedWord = stringbuilder.reverse().toString();
 		assertEquals("gaJ", reversedWord);
 	}
 
 	// Uppgift 2 
 	@Test
-	public void justASimpleAssert() {
+	public void testAString() {
 		String name = "My name";
 		assertEquals("My name", name);
-		//return "String";
 	}
 
 	// Uppgift 3
@@ -52,38 +52,39 @@ public class StringTest {
 
 	// uppgift 4
 	@Test
-	public void testingAsSimpleAsPossible() {
+	public void testLengthOfAString() {
 		String jUnit = "Junit 5";
 		int jUnitLength = jUnit.length();
 		assertEquals(7, jUnitLength);
 	}
 
-	// Uppgift 5 - man måste lägga till @Test -annotation för att testa metoden
+	// Uppgift 5 
 	@Test
-	public void giveMeASimpleVerification() {
-		assertEquals(100, 100);
+	public void testANumber() {
+		int number = 100;
+		assertEquals(100, number);
 	}
 
 	// Uppgift 6
 	@Test
-	public void checkingSame() {
-		String s1 = new String("S1");
-		String s2 = new String("S1");
-		s1 = s2;
-		assertSame(s1, s2);
+	public void testStringObjectsAreSame() {
+		String stringObj1 = new String("S1");
+		String stringObj2 = new String("S1");
+		stringObj1 = stringObj2;
+		assertSame(stringObj1,stringObj2);
 	}
 
 	// Uppgift 7
 	@Test
-	public void checkingBytes() {
-		byte smallByte1 = 100;
-		byte smallByte2 = smallByte1;
-		assertTrue(smallByte1 == smallByte2);
+	public void testByteNumbers() {
+		byte byteNum1 = 100;
+		byte byteNum2 = byteNum1;
+		assertTrue(byteNum1 == byteNum2);
 	}
 
 	// Uppgift 9
 	@Test
-	public void checkingTrue() {
+	public void testObjectsAreSame() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
 		assertTrue(obj1 != obj2);
@@ -91,7 +92,7 @@ public class StringTest {
 
 	// Uppgift 10
 	@Test
-	public void checkingFalse() {
+	public void testObjectsAreNotSame() {
 		Object obj1 = new Object();
 		Object obj2 = new Object();
 		assertFalse(obj1 == obj2);
